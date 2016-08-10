@@ -18,33 +18,49 @@
 #   - have that function print the letters and print the # of words excluded
 ##############################################################################
 # Imports
+import string
+
 
 # Body
 
 
-def avoids():
+def avoids(word, f_letters):
     """ return True if word NOT forbidden"""
-    ...
+    for each_letter in f_letters:
+        if each_letter not in word:
+            return True
+        else:
+            return False
 
 
 def forbidden_prompt():
     """ print count of words NOT forbidden by input"""
-    ...
+    forbidden_letters = input("Enter a string of forbidden letters: ")
+    count = 0
+    while True:
+        if avoids(word, forbidden_letters):
+        print(coun+=1)
+    return count
 
-
-def forbidden_param():
+def forbidden_param(string):
     """ return count of words NOT forbidden by param"""
-    ...
+    print("{} numbers don't contain any of your forbidden letters".format(forbidden_prompt()))
 
 
-def find_five():
-    ...
+def find_five(filename):
+    count = 0
+    alpha = ascii_lowercase
+    for letter in alpha:
+        if letter in  open(filename, 'r').read():
+            # I give up
+
+
+
 
 
 ##############################################################################
 def main():
-    ...
-    # Your final submission should only call five_five
+    find_five("words.txt")
 
 if __name__ == '__main__':
     main()

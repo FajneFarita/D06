@@ -14,11 +14,25 @@
 # Imports
 
 # Body
+def has_no_e(word):
+    return 'e' not in word
+#has_no_e("reward")
 
+def percentage(part, whole):
+  return round(100 * float(part)/float(whole), 2)
 
+def print_no_e(filename):
+    with open(filename, 'r') as f:
+        lines = f.readlines()
+        count = 0
+        for line in lines:
+            if has_no_e(line):
+                print(line)
+                count +=1
+        print("{} persent of the words in the list have no 'e'".format(percentage(count, len(lines))))
 ##############################################################################
 def main():
-    pass  # Call your function(s) here.
+    print_no_e("words.txt")
 
 if __name__ == '__main__':
     main()
